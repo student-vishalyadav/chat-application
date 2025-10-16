@@ -24,7 +24,10 @@ main()
   });
 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/Whatsapp');
+ async function main() {
+  await mongoose.connect('mongodb+srv://vishl0452_db_user:YOUR_PASSWORD@whatsappappcluster.aqndsek.mongodb.net/Whatsapp?retryWrites=true&w=majority&appName=WhatsappAppCluster');
+}
+
 }
 
 // Get all chats
