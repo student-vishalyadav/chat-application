@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EDIT YOUR CHATS</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #ece9e6, #ffffff); color: #333;">
+
+  <div style="max-width: 600px; margin: 60px auto; padding: 40px; background-color: #fff; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
+
+    <h1 style="text-align: center; color: #2c3e50; margin-bottom: 10px; font-size: 28px;">✏️ Edit Your Chat</h1>
+    <h3 style="text-align: center; color: #7f8c8d; font-weight: normal; margin-top: 0;">Chat ID: <%= chat._id %></h3>
+
+    <p style="text-align: center; color: #555;">From <strong><%= chat.from %></strong> to <strong><%= chat.to %></strong></p>
+
+    <form method="POST" action="/chats/<%= chat._id %>?_method=PUT" style="margin-top: 30px;">
+
+      <label for="msg" style="display: block; font-weight: bold; margin-bottom: 8px;">Message</label>
+      <textarea 
+        name="msg" 
+        id="msg" 
+        rows="6" 
+        style="width: 100%; padding: 12px; font-size: 15px; border: 1px solid #ccc; border-radius: 8px; resize: vertical; box-sizing: border-box;"
+      ><%= chat.msg %></textarea>
+
+      <button 
+        type="submit" 
+        style="margin-top: 20px; width: 100%; background-color: #4a90e2; color: white; border: none; padding: 14px; font-size: 16px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s ease;"
+        onmouseover="this.style.backgroundColor='#357ABD'"
+        onmouseout="this.style.backgroundColor='#4a90e2'"
+      >
+        ✅ Update Chat
+      </button>
+    </form>
+  </div>
+
+</body>
+</html>

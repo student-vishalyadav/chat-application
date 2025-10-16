@@ -1,0 +1,117 @@
+/* Base Reset & Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+  color: #2c3e50;
+  padding: 40px 20px;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  color: #1a1a1a;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Button Base Style */
+button {
+  background-color: #0d6efd;
+  color: white;
+  font-weight: 500;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #0b5ed7;
+}
+
+/* New Chat Button Centered */
+form[action="/chats/new"] {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/* Chat Card */
+.chats {
+  background-color: #ffffff;
+  border: 1px solid #e0e6ed;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 0 auto 30px;
+  max-width: 700px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease;
+}
+
+.chats:hover {
+  transform: translateY(-3px);
+}
+
+/* Info Block */
+.chats p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.chats i {
+  color: #6c757d;
+}
+
+/* Message Block */
+.msg {
+  background-color: #f1f3f5;
+  border-left: 4px solid #0d6efd;
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-style: italic;
+  color: #444;
+}
+
+/* Timestamp & Divider */
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #dee2e6;
+  margin: 16px 0;
+}
+
+.chats time,
+.chats p:last-of-type {
+  color: #888;
+  font-size: 0.875rem;
+}
+
+/* Edit/Delete Buttons */
+.chats form {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .chats {
+    padding: 16px;
+  }
+
+  button {
+    padding: 8px 14px;
+    font-size: 0.95rem;
+  }
+}
