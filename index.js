@@ -23,12 +23,14 @@ main()
     console.log(err);
   });
 
+
 async function main() {
- async function main() {
-  await mongoose.connect('mongodb+srv://vishl0452_db_user:YOUR_PASSWORD@whatsappappcluster.aqndsek.mongodb.net/Whatsapp?retryWrites=true&w=majority&appName=WhatsappAppCluster');
+  await mongoose.connect('mongodb+srv://vishalyadav7282mhadev_db_user:5JI39Bht5UE3l0Xz@cluster0.n7swpqz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+   
+  });
 }
 
-}
+
 
 // Get all chats
 app.get("/chats", async (req, res) => {
